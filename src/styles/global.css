@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(195, 195, 195),rgb(228, 228, 228)); background-blend-mode:overlay,overlay,overlay,normal;
+  min-height: 100vh;
+}
+
+.def-humaticien{position: relative; border-bottom: dotted 1px gray; cursor: help;}
+.def-humaticien::after{
+  content: "Spécialiste des humanités numériques";
+  position: absolute;
+  opacity: 0;
+  width: 300px;
+  font-size: 16px;
+  top: 30px;
+  left: -50%;
+  text-align: center;
+  background:rgb(0, 0, 0);
+  color: white;
+  padding: 5px;
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.527);
+  border: 0.5px solid black;
+  border-radius: 30px;
+  transition: height 0.5s, opacity 0.5s;
+  overflow: hidden;
+  height:0;
+  cursor: help;
+}
+.def-humaticien:hover::after{
+  opacity: 1;
+  height: 40px;
+  bottom:10px;
+}
+.prose p{
+  text-align: justify;
+}

@@ -1,0 +1,23 @@
+---
+  import Terre from '../components/Terre.vue';
+  import DefaultLayout from '../layouts/defaultLayout.astro'
+---
+  <DefaultLayout titre="Développeur web, cartographe et plus" description="test">
+        <div class="flex items-center justify-center -mt-24">
+          <div class="flex flex-col justify-items-end place-items-end select-none">
+            <h1 class="text-9xl text-right">JOSHUA <br/> <b>VACHON</b></h1>
+            <p class="text-2xl text-right">
+              Développeur web, cartographe, <span class="def-humaticien">humaticien</span>, curieux
+            </p>
+            <nav class="flex flex-row py-5">
+              <button class="flex items-center px-6 py-2 transition ease-in duration-200 uppercase rounded-md hover:bg-gray-800 hover:text-white focus:outline-none"><a href="/blog/" >Articles</a></button>
+              <button class="flex items-center px-6 py-2 transition ease-in duration-200 uppercase rounded-md hover:bg-gray-800 hover:text-white focus:outline-none"><a href="/projets/" >Projets</a></button>
+              <button class="flex items-center px-6 py-2 transition ease-in duration-200 uppercase rounded-md hover:bg-gray-800 hover:text-white focus:outline-none"><a href="/a-propos" >À propos</a></button>
+            </nav>
+          </div>
+          
+        </div>
+        <div class="flex flex-row items-center justify-center -mt-24">
+          <Terre client:only/>
+        </div>
+  </DefaultLayout>

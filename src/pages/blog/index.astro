@@ -1,0 +1,49 @@
+---
+  import DefaultLayout from '../../layouts/defaultLayout.astro'
+  import ListeArticles from '../../components/ListeArticles.vue'
+  const articles = Astro.fetchContent('./*.md')
+---
+  <DefaultLayout titre="Développeur web, cartographe et plus" description="test">
+  <div>
+    <section class="px-4 py-24 mx-auto max-w-7xl">
+    <h2 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900">Le nid aux articles</h2>
+    <p class="mb-7 text-lg text-gray-500">Un mélange de tout, qui comprends des critiques, des articles informatifs, des tutos, des tranches de vie ou simplement des découvertes sur le web</p>
+    <div class="container mx-auto flex flex-row justify-center items-center space-x-4 flex-wrap mb-16">
+      <h6>Filtrer:</h6> 
+      <a href="/blog/billet" class="px-3 py-1 bg-blue-200 text-black rounded-2xl inline-flex items-center justify-between space-x-3">
+        <span class="w-2 h-2 bg-blue-400 rounded-full mr-4"></span>
+        Blog
+      </a>
+      <a href="/blog/cartographie" class="px-3 py-1 bg-blue-200 text-black rounded-2xl inline-flex items-center justify-between space-x-3">
+        <span class="w-2 h-2 bg-blue-400 rounded-full mr-4"></span>
+        Cartographie
+      </a>
+      <a href="/blog/dev" class="px-3 py-1 bg-blue-200 text-black rounded-2xl inline-flex items-center justify-between space-x-3">
+        <span class="w-2 h-2 bg-blue-400 rounded-full mr-4"></span>
+        Web/Dev
+      </a>
+      <a href="/blog/decouverte" class="px-3 py-1 bg-blue-200 text-black rounded-2xl inline-flex items-center justify-between space-x-3">
+        <span class="w-2 h-2 bg-blue-400 rounded-full mr-4"></span>
+        Découvertes
+      </a>
+      <a href="/blog/hnum" class="px-3 py-1 bg-blue-200 text-black rounded-2xl inline-flex items-center justify-between space-x-3">
+        <span class="w-2 h-2 bg-blue-400 rounded-full mr-4"></span>
+        Humanités numériques
+      </a>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+      <ListeArticles articles={articles} />
+    </div>
+    
+    
+    <!--
+    <div class="flex flex-col items-center justify-center mt-20 space-x-0 space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
+      <a href="#" class="w-full rounded-full btn btn-light btn-xl md:w-auto">Previous Page</a>
+      <a href="#" class="w-full rounded-full btn btn-light btn-xl md:w-auto">Next Page</a>
+    </div>-->
+  </section>
+
+      
+  </div>
+  </DefaultLayout>

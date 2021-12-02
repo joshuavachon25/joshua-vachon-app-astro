@@ -1,0 +1,21 @@
+---
+  import MainHead from '../components/MainHead.astro';
+  import Header from '../components/Header.vue'
+  import Footer from '../components/Footer.vue'
+  const { content } = Astro.props;
+---
+  <html lang='fr'>
+  <head>
+    <MainHead title={content.titre + ' — Joshua L.J. Vachon'} description={content.description} />
+    <script src="https://kit.fontawesome.com/605c15ecea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+  </head>
+  <body>
+      <Header/>
+      <div class="content">
+        <slot>
+        </slot>
+      </div>
+      <Footer/>
+  </body>
+</html>
