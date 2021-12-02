@@ -10,17 +10,8 @@
     <p class="mb-7 text-lg text-gray-500">Un mélange de tout, qui comprends des critiques, des articles informatifs, des tutos, des tranches de vie ou simplement des découvertes sur le web</p>
 
     <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-      <ListeArticles articles={articles} />
+      <ListeArticles client:only articles={articles} />
     </div>
-    
-    
-    <!--
-    <div class="flex flex-col items-center justify-center mt-20 space-x-0 space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
-      <a href="#" class="w-full rounded-full btn btn-light btn-xl md:w-auto">Previous Page</a>
-      <a href="#" class="w-full rounded-full btn btn-light btn-xl md:w-auto">Next Page</a>
-    </div>-->
   </section>
-
-      
   </div>
   </DefaultLayout>
