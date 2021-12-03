@@ -1,7 +1,10 @@
 ---
   import DefaultLayout from '../../layouts/defaultLayout.astro'
   import ListeArticles from '../../components/ListeArticles.vue'
-  const articles = Astro.fetchContent('./*.md')
+  const articles = Astro.fetchContent('./*.md').map(article => {
+    const { Content, ...data } = article;
+    return data;
+  })
 ---
   <DefaultLayout titre="Développeur web, cartographe et plus" description="test">
   <div>
